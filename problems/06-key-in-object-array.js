@@ -21,6 +21,15 @@ keyInObjectArray(objArray, 'animal'); // => false
 
 function keyInObjectArray(objArray, keyString) {
   // Your code here 
+  let keyArr = [];
+
+  for (let key in objArray) {
+      if (Object.keys(objArray[key]).includes(keyString)) {
+          return true;
+      }
+  }
+  
+  return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
